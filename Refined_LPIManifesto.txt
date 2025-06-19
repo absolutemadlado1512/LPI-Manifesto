@@ -1,0 +1,547 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setcounter{secnumdepth}{2} % Only sections and subsections numbered
+\setlist[enumerate,1]{label=\arabic*.} % Simple 1, 2, 3 numbering
+\setlist[enumerate,2]{label*=\arabic*.}
+\setlist[enumerate,3]{label*=\arabic*.}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+% Define colors
+\definecolor{primaryblue}{RGB}{25,118,210}
+\definecolor{secondaryorange}{RGB}{255,152,0}
+\definecolor{lightgray}{RGB}{245,245,245}
+\definecolor{darkgray}{RGB}{66,66,66}
+\definecolor{saffron}{RGB}{255,153,51}
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{green}{RGB}{19,136,8}
+% Color scheme (Indian flag colors + liberty blue)
+ 
+\definecolor{indiagreen}{RGB}{19, 136, 8}
+\definecolor{libertyblue}{RGB}{0, 85, 164}
+\definecolor{ashoka}{RGB}{0, 0, 128}
+
+% Section formatting
+\titleformat{\section}{\LARGE\bfseries\color{libertyblue}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{indiagreen}}{\thesubsection}{1em}{}
+
+% Custom environments
+\definecolor{shadecolor}{gray}{0.9}
+\definecolor{highlightcolor}{RGB}{255, 248, 220}
+\definecolor{pledgecolor}{RGB}{240, 255, 240}
+% Configure tcolorbox
+\tcbuselibrary{skins,breakable}
+
+% Custom box styles
+\newtcolorbox{sectionbox}[1]{
+    enhanced,
+    boxsep=5pt,
+    arc=4pt,
+    colback=lightgray,
+    colframe=primaryblue,
+    fonttitle=\bfseries\large,
+    title=#1,
+    attach boxed title to top left={yshift=-2mm,xshift=5mm},
+    boxed title style={colback=primaryblue,colframe=primaryblue,arc=2pt},
+    breakable
+}
+
+\newtcolorbox{preamblebox}{
+    enhanced,
+    boxsep=8pt,
+    arc=6pt,
+    colback=saffron!10,
+    colframe=saffron,
+    fonttitle=\bfseries\LARGE,
+    title=PREAMBLE,
+    attach boxed title to top center={yshift=-3mm},
+    boxed title style={colback=saffron,colframe=saffron,arc=3pt},
+    breakable,
+    width=\textwidth
+}
+
+\newtcolorbox{visionbox}{
+    enhanced,
+    boxsep=8pt,
+    arc=6pt,
+    colback=green!10,
+    colframe=green,
+    fonttitle=\bfseries\LARGE,
+    title=OUR VISION FOR INDIA,
+    attach boxed title to top center={yshift=-3mm},
+    boxed title style={colback=green,colframe=green,arc=3pt},
+    breakable,
+    width=\textwidth
+}
+
+\newtcolorbox{promisebox}{
+    enhanced,
+    boxsep=8pt,
+    arc=6pt,
+    colback=secondaryorange!10,
+    colframe=secondaryorange,
+    fonttitle=\bfseries\LARGE,
+    title=OUR PROMISE TO INDIA,
+    attach boxed title to top center={yshift=-3mm},
+    boxed title style={colback=secondaryorange,colframe=secondaryorange,arc=3pt},
+    breakable,
+    width=\textwidth
+}
+
+% Title formatting
+\titleformat{\section}{\Large\bfseries\color{primaryblue}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{darkgray}}{\thesubsection}{1em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{primaryblue}{\textbf{Libertarian Party of India}}}
+\fancyhead[R]{\textcolor{darkgray}{Manifesto for Freedom}}
+\fancyfoot[C]{\textcolor{darkgray}{\thepage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{primaryblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=primaryblue,
+    pdftitle={Libertarian Party of India - Manifesto for Freedom},
+    pdfauthor={Libertarian Party of India}
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+{\fontsize{50}{40}\selectfont\bfseries\textcolor{libertyblue}{Libertarian Party of India}}\\[0.5cm]
+{\LARGE\textcolor{saffron}{Bhartiya Swatantrata Party}}\\[1cm]
+{\Huge\bfseries\textcolor{indiagreen}{MANIFESTO}}\\[1.5cm]
+{\Large\textcolor{ashoka}{"Azadi Se Samriddhi"}}\\[0.3cm]
+{\large\textit{(Prosperity Through Freedom)}}\\[2cm]
+
+% Create a simple logo placeholder using LaTeX commands
+\begin{center}
+\textcolor{saffron}{\rule{3cm}{0.5pt}}\\[0.2cm]
+\textcolor{libertyblue}{\Large\textbf{LPI}}\\[0.2cm]
+\textcolor{indiagreen}{\rule{3cm}{0.5pt}}
+\end{center}
+
+\vfill
+ 
+\end{titlepage}
+
+
+% Table of Contents - Level 2 depth
+\newpage
+\setcounter{tocdepth}{2}  % Sections and subsections only
+\tableofcontents
+\newpage
+
+% Document begins
+\begin{preamblebox}
+We, the Libertarian Party of India, believe every individual possesses the inherent right to self-rule (\textit{swaraj}) and to live freely without harming others. We envision a world of sovereign individuals, free from coercion, where force and fraud are rejected. True peace and prosperity flourish only in liberty.
+
+Drawing strength from India's enduring traditions of tolerance, pluralism, and voluntary cooperation, we declare that the moral arc of progress bends toward individual empowerment, not state control. We pledge to defend and fulfill our Constitution's mandate of liberty, equality, and fraternity—its sacred trust.
+
+\textbf{Our Core Principle: The Non-Aggression Principle}
+
+We believe that no individual or institution has the right to initiate force or fraud against another. All human interactions must be voluntary, peaceful, and based on mutual consent.
+\end{preamblebox}
+
+\vspace{1cm}
+
+\begin{visionbox}
+We envision a nation where dignity, security, and freedom are not privileges for the few but the birthright of every citizen. A nation where liberty is real, rooted in everyday life, and guided by moral principles that unite us.
+
+In this India, everyone has access to life's essentials—food, shelter, healthcare, and education—ensuring no one is trapped in mere survival. True freedom begins when the daily struggle ends, allowing people to dream, create, and build.
+
+We will be a nation of progress where entrepreneurs, artists, engineers, and creators find room to flourish. A civilization of excellence that transcends divisions of caste, creed, and class. An India that stands tall among nations not by conquering others, but by empowering its people.
+\end{visionbox}
+
+\newpage
+
+% Restructured section hierarchy
+\section{FUNDAMENTAL FREEDOMS} % Section 1
+
+\subsection{Freedom of Expression} % 1.1
+\begin{sectionbox}{Freedom of Expression}
+Freedom of speech is non-negotiable. A free society must tolerate dissent, satire, unpopular opinions, and criticism of power without fear of censorship.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Repeal vague speech laws that enable arbitrary prosecution
+\item Ban pre-publication censorship
+\item Guarantee access to uncensored information
+\item Protect digital rights and online freedom
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Religious Freedom} % 1.2
+\begin{sectionbox}{Religious Freedom}
+The state has no role in regulating temples or religious practices. Every community must manage its own places of worship without political interference.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Repeal the Hindu Religious and Charitable Endowments Act
+\item Ensure complete separation of religion and state
+\item Protect minority rights while respecting majority sentiments
+\item End bureaucratic control over religious institutions
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Right to Self-Defense} % 1.3
+\begin{sectionbox}{Right to Self-Defense}
+The right to bear arms is the ultimate check against tyranny. Responsible citizens must be empowered, not criminalized, for choosing to protect themselves and their families.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Reform India's restrictive colonial-era gun laws
+\item Implement transparent, efficient licensing for responsible citizens
+\item Recognize self-defense as a fundamental right
+\item Establish clear guidelines for lawful firearm ownership
+\end{enumerate}
+\end{sectionbox}
+
+% Main sections restructured
+\section{ECONOMIC FREEDOM} % Section 2
+
+\subsection{Free Markets} % 2.1
+\begin{sectionbox}{Free Markets}
+Markets are engines of prosperity. We support minimal regulation, low taxation, and the right to trade without cronyism or favoritism.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Eliminate licensing cartels and bureaucratic barriers
+\item Protect voluntary exchange between consenting adults
+\item End moral policing of business activities
+\item Create a level playing field for all entrepreneurs
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Revolutionary Tax Reform} % 2.2
+\begin{sectionbox}{Revolutionary Tax Reform}
+Taxation is not just an economic issue—it's a freedom issue. Every layer of tax is a layer of control.
+
+\textbf{Our Vision:}
+\begin{enumerate}[leftmargin=*]
+\item Abolish income tax for the majority of citizens
+\item Replace complex tax structure with a simple flat consumption tax
+\item End double taxation on savings and investments
+\item Drastically reduce indirect taxes
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Comprehensive Deregulation} % 2.3
+\begin{sectionbox}{Comprehensive Deregulation}
+Regulation should protect rights, not paralyze opportunity. Today's maze of rules, licenses, and approvals chokes innovation and criminalizes ordinary citizens.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Eliminate needless licenses and permits
+\item Slash red tape across all sectors
+\item Dismantle regulatory bodies that exist only to justify themselves
+\item Let markets regulate quality and competition enforce standards
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{End Government Business Operations} % 2.4
+\begin{sectionbox}{End Government Business Operations}
+The government is not an entrepreneur and shouldn't pretend to be one. Every rupee spent running businesses is taken from taxpayers to fund inefficiency and corruption.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Close or privatize all government-run businesses
+\item Exit sectors including airlines, hotels, factories, and telecom
+\item Focus state resources on protecting rights, not producing goods
+\item Let private sector deliver better, faster, more honest services
+\end{enumerate}
+\end{sectionbox}
+
+\section{MONETARY AND FINANCIAL FREEDOM} % Section 3
+
+\subsection{Monetary Reform and Currency Liberation} % 3.1
+\begin{sectionbox}{Monetary Reform and Currency Liberation}
+A free economy cannot thrive under centralized monetary control. We advocate fundamental reform to return financial power to the people.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item End RBI's monopoly on currency issuance
+\item Legalize competing forms of money (digital and commodity-backed)
+\item Limit RBI's role to serving as lender of last resort
+\item Let markets, not bureaucrats, set interest rates
+\item Phase out fiat currency distortions
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Cryptocurrency Revolution} % 3.2
+\begin{sectionbox}{Cryptocurrency Revolution}
+Embrace the digital economy of the future with complete cryptocurrency freedom.
+
+\textbf{Our Vision:}
+\begin{enumerate}[leftmargin=*]
+\item Remove TDS and capital gains tax on crypto transactions
+\item Allow self-custody through self-hosted wallets
+\item Legalize crypto for trading, currency use, and contracts
+\item Implement land records on blockchain
+\item Fund state agencies with trackable blockchain currency
+\item Enable banks to provide crypto services and blockchain certificates
+\item Protect Web3 innovation and development
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Unilateral Free Trade} % 3.3
+\begin{sectionbox}{Unilateral Free Trade}
+Trade is a natural right, not a privilege to be negotiated. We will unilaterally eliminate tariffs, quotas, and trade barriers.
+
+\textbf{Our Principle:}
+\begin{enumerate}[leftmargin=*]
+\item Free trade benefits consumers with lower prices and better choices
+\item Protectionism only protects the politically connected
+\item Global competitiveness comes from freedom, not barriers
+\item We will never wait for permission to be free
+\item Government has no role of coercion in Remittance, or any kind of trade 
+\end{enumerate}
+\end{sectionbox}
+
+\section{SOCIAL JUSTICE AND EQUALITY} % Section 4
+
+\subsection{End Caste-Based Reservations} % 4.1
+\begin{sectionbox}{End Caste-Based Reservations}
+True equality cannot be achieved by perpetuating divisions. We call for a merit-based system that truly helps the disadvantaged.
+
+\textbf{Our Approach:}
+\begin{enumerate}[leftmargin=*]
+\item Phase out caste-based quotas systematically
+\item Replace with economically sensitive support systems
+\item Focus on uplifting the genuinely disadvantaged
+\item End identity politics and embrace individual merit
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Decentralization of Power} % 4.2
+\begin{sectionbox}{Decentralization of Power}
+Power must flow downward to states, communities, and individuals. Central planning has failed—governance must be local, accountable, and responsive.
+
+\textbf{Our Strategy:}
+\begin{enumerate}[leftmargin=*]
+\item Transfer authority from center to states and localities
+\item Empower communities to solve their own problems
+\item Make governance closer to the people it serves
+\item End one-size-fits-all policies from Delhi
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Private Cities and Charter Communities} % 4.3
+\begin{sectionbox}{Private Cities and Charter Communities}
+We will make it easy to establish private cities and charter communities that can experiment with innovative governance models while respecting individual rights.
+
+\textbf{Our Vision:}
+\begin{enumerate}[leftmargin=*]
+\item Streamline approvals for private city development projects
+\item Allow charter communities like Gurgaon model
+\item Enable voluntary communities to set their own rules and standards
+\item Protect residents' rights to exit and choose alternative governance
+\item Foster competition between different governance models
+\item Let successful models inspire broader reforms
+\end{enumerate}
+\end{sectionbox}
+
+\section{INSTITUTIONAL REFORMS} % Section 5
+
+\subsection{Judicial Reform} % 5.1
+\begin{sectionbox}{Judicial Reform}
+Justice delayed is Justice denied. We demand deep reform to restore trust and accelerate resolution.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Abolish the Collegium system
+\item Create fast-track courts for all disputes
+\item Ensure transparent case management and appointments
+\item Make all Indian courts function year-round
+\item Enforce judicial restraint over judicial activism
+\item Guarantee justice without delay or abuse
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Government Transparency} % 5.2
+\begin{sectionbox}{Government Transparency}
+Every law, every rupee, every decision made with public authority must be open to scrutiny.
+
+\textbf{Our Commitment:}
+\begin{enumerate}[leftmargin=*]
+\item Full disclosure of budgets and contracts in real-time
+\item Transparent legislative proceedings in plain language
+\item End sealed files and backroom governance
+\item Make public servants truly accountable to the people
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Abolish Unnecessary Departments} % 5.3
+\begin{sectionbox}{Abolish Unnecessary Departments}
+Eliminate redundant bureaucracies that exist only to employ the politically loyal and waste taxpayer money.
+
+\textbf{Our Approach:}
+\begin{enumerate}[leftmargin=*]
+\item Systematic audit of all government departments
+\item Abolish non-essential functions that can be done privately
+\item Focus government on core functions only
+\item Reduce corruption through smaller, accountable governance
+\end{enumerate}
+\end{sectionbox}
+
+\section{ESSENTIAL SERVICES REFORM} % Section 6
+
+\subsection{Healthcare Freedom} % 6.1
+\begin{sectionbox}{Healthcare Freedom}
+Healthcare is too important for government monopolies. We believe in choice, competition, and individual control over medical decisions.
+
+\textbf{Our Vision:}
+\begin{enumerate}[leftmargin=*]
+\item Competitive, decentralized healthcare system
+\item Expand insurance choices and low-cost clinic options
+\item Remove regulatory barriers that increase costs
+\item Portable, needs-based subsidies and health savings accounts
+\item End dependence on political healthcare handouts
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Educational Liberation} % 6.2
+\begin{sectionbox}{Educational Liberation}
+Education should liberate minds, not condition them. We believe in educational freedom through diverse choices and local control.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Break government monopoly on education
+\item Encourage private schools, homeschooling, and online platforms
+\item Implement voucher-based funding that follows students
+\item Depoliticize curriculums and protect parental rights
+\item Teach students how to think, not what to think
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Environmental Stewardship} % 6.3
+\begin{sectionbox}{Environmental Stewardship}
+We reject the false choice between freedom and clean environment. True environmental protection comes from property rights and innovation.
+
+\textbf{Our Approach:}
+\begin{enumerate}[leftmargin=*]
+\item Hold polluters liable for rights violations
+\item Strengthen tort laws for environmental damage
+\item Support clean-tech entrepreneurship
+\item Empower local communities as environmental guardians
+\item Reject distant bureaucratic mandates
+\end{enumerate}
+\end{sectionbox}
+
+\section{INFRASTRUCTURE AND DEVELOPMENT} % Section 7
+
+\subsection{Resilient Infrastructure} % 7.1
+\begin{sectionbox}{Resilient Infrastructure}
+With 59\% of India vulnerable to earthquakes, we must build for durability, not political showpieces.
+
+\textbf{Our Strategy:}
+\begin{enumerate}[leftmargin=*]
+\item Invest in earthquake-resistant technology research
+\item Open construction to genuine competition
+\item Cut red tape and ensure project transparency
+\item Build for generations, not election cycles
+\item Leverage private innovation and local expertise
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Police Reform and Accountability} % 7.2
+\begin{sectionbox}{Police Reform and Accountability}
+Law enforcement must serve and protect, not intimidate and control.
+
+\textbf{Our Requirements:}
+\begin{enumerate}[leftmargin=*]
+\item Every police officer must wear body cameras
+\item Transparent complaint and disciplinary processes
+\item End police harassment of law-abiding citizens
+\item Focus on protecting rights, not enforcing arbitrary rules
+\end{enumerate}
+\end{sectionbox}
+
+\section{DIGITAL RIGHTS AND MODERN PROTECTIONS} % Section 8
+
+\subsection{Privacy and Data Protection} % 8.1
+\begin{sectionbox}{Privacy and Data Protection}
+Personal data belongs to individuals, not corporations or governments.
+
+\textbf{Our Actions:}
+\begin{enumerate}[leftmargin=*]
+\item Enact stringent Data Protection Act criminalizing unwarranted surveillance
+\item Mandate transparent breach notifications
+\item Guarantee individuals full control over personal data
+\item Protect digital privacy as fundamental right
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Property Rights Protection} % 8.2
+\begin{sectionbox}{Property Rights Protection}
+Strong property rights fuel innovation and economic growth.
+
+\textbf{Our Commitment:}
+\begin{enumerate}[leftmargin=*]
+\item Fast, transparent land-title resolution
+\item Iron-clad intellectual property protection
+\item Protect both traditional artisans and tech innovators
+\item Ensure full rewards for creative and productive work
+\end{enumerate}
+\end{sectionbox}
+
+\subsection{Contract Enforcement} % 8.3
+\begin{sectionbox}{Contract Enforcement}
+Reliable contract enforcement drives commerce and innovation.
+
+\textbf{Our Reforms:}
+\begin{enumerate}[leftmargin=*]
+\item Modernize the Indian Contract Act of 1872
+\item Recognize e-signatures and digital agreements
+\item Establish fast-track commercial tribunals
+\item Resolve disputes within six months
+\item Restore confidence in voluntary agreements
+\end{enumerate}
+\end{sectionbox}
+
+\newpage
+
+\begin{promisebox}
+This manifesto is not just a political document—it is a covenant with the people of India. We promise to fight for every freedom, defend every right, and challenge every system that puts power above people.
+
+We believe in an India where:
+\begin{enumerate}[leftmargin=*]
+\item Every citizen can dream without fear
+\item Every entrepreneur can innovate without barriers
+\item Every family can prosper through their own efforts
+\item Every individual can live with dignity and purpose
+\end{enumerate}
+
+The choice is clear: more government control or more individual freedom. We choose freedom.
+
+\textbf{Join us in building a truly free India.}
+
+\vspace{1cm}
+
+\textit{"The best government is that which governs least, because its people discipline themselves."} - Drawing inspiration from the timeless wisdom that freedom and responsibility go hand in hand.
+
+\vspace{1cm}
+
+\centering
+\textbf{\Large LIBERTARIAN PARTY OF INDIA}\\
+\textit{ Azadi Se Samriddhi - Prosperity through Freedom }
+\end{promisebox}
+
+\end{document}
