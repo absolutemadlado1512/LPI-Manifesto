@@ -196,7 +196,6 @@ The state has no role in regulating temples or religious practices. Every commun
 \begin{enumerate}[leftmargin=*]
 \item Repeal the Hindu Religious and Charitable Endowments Act
 \item Ensure complete separation of religion and state
-\item Protect minority rights while respecting majority sentiments
 \item End bureaucratic control over religious institutions
 \end{enumerate}
 \end{sectionbox}
